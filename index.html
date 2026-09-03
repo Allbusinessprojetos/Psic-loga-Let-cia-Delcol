@@ -164,9 +164,32 @@ blockquote footer{font-size:12px;text-transform:uppercase;letter-spacing:.15em;c
 .faq-list details[open] summary:after{content:"—"}
 .faq-list p{font-size:13px;color:var(--muted);margin:0;padding:0 4px 20px}
 .google-cta{background:#fffaf5}
-.google-box{background:#e7d7ca;border-radius:30px;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.reviews-panel{background:var(--sand);border-radius:30px;padding:48px}
+.google-box{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:0 0 34px;margin-bottom:34px;border-bottom:1px solid rgba(109,73,59,.14)}
 .google-box h2{font-size:clamp(34px,3.5vw,50px);max-width:700px}
 .google-box p:not(.eyebrow){max-width:680px;color:var(--muted)}
+.reviews-widget{overflow:hidden}
+.reviews-widget :is([class*="eapps-widget"],[class*="eapps-google-reviews"],[class*="eapps-review"]){font-family:var(--sans) !important}
+.reviews-widget [class*="header"]{background:transparent !important;box-shadow:none !important}
+.reviews-widget [class*="header"] [class*="logo"],
+.reviews-widget [class*="header"] [class*="title"]{color:var(--ink) !important;font-family:var(--serif) !important}
+.reviews-widget [class*="write-review-button"],
+.reviews-widget [class*="toolbar-button"],
+.reviews-widget [class*="header-button"]{
+  background:var(--brown) !important;color:#fff !important;border:none !important;
+  border-radius:999px !important;box-shadow:0 10px 30px rgba(88,54,42,.15) !important;
+  font-weight:600 !important;transition:.25s ease !important;
+}
+.reviews-widget [class*="write-review-button"]:hover,
+.reviews-widget [class*="toolbar-button"]:hover,
+.reviews-widget [class*="header-button"]:hover{background:var(--brown-2) !important;transform:translateY(-2px)}
+.reviews-widget [class*="review-item"],
+.reviews-widget [class*="review-card"],
+.reviews-widget [class*="reviews-list-item"]{
+  background:#fffaf5 !important;border:1px solid rgba(109,73,59,.12) !important;
+  border-radius:18px !important;box-shadow:none !important;
+}
+.reviews-widget [class*="powered"]{opacity:.55}
 .button-light{background:#fff;color:var(--brown);box-shadow:none}
 .button-light:hover{background:#fff;transform:translateY(-2px)}
 .cta-section{background:linear-gradient(135deg,var(--brown),#835a49);color:#fff;padding:110px 0}
@@ -224,7 +247,8 @@ blockquote footer{font-size:12px;text-transform:uppercase;letter-spacing:.15em;c
   .soft-card,.process-card{min-height:auto}
   .image-panel img,.image-panel.tall img{height:500px}
   .quote-visual img{height:480px}
-  .google-box{padding:30px 24px}
+  .reviews-panel{padding:28px 20px;border-radius:24px}
+  .google-box{padding:0 0 24px;margin-bottom:24px}
   .footer-inner{grid-template-columns:1fr}
   .footer-links{justify-content:flex-start;flex-direction:column;gap:6px}
   .whatsapp-float{right:14px;bottom:14px}
@@ -613,15 +637,24 @@ blockquote footer{font-size:12px;text-transform:uppercase;letter-spacing:.15em;c
     </section>
 
     <section class="section google-cta">
-      <div class="shell google-box reveal">
-        <div>
-          <p class="eyebrow">Google</p>
-          <h2>Sua experiência também pode <em>contribuir.</em></h2>
-          <p>Se você já conhece o meu trabalho e se sente à vontade para compartilhar sua experiência, sua avaliação pode ajudar outras pessoas a conhecerem o atendimento e encontrarem um espaço de cuidado.</p>
+      <div class="shell">
+        <div class="reviews-panel reveal">
+          <div class="google-box">
+            <div>
+              <p class="eyebrow">Google</p>
+              <h2>Sua experiência também pode <em>contribuir.</em></h2>
+              <p>Se você já conhece o meu trabalho e se sente à vontade para compartilhar sua experiência, sua avaliação pode ajudar outras pessoas a conhecerem o atendimento e encontrarem um espaço de cuidado.</p>
+            </div>
+            <a class="button button-light" href="https://www.google.com/maps/search/?api=1&query=Psic%C3%B3loga%20Let%C3%ADcia%20Delcol%20Jales" target="_blank" rel="noopener">
+              Avaliar no Google
+            </a>
+          </div>
+
+          <div class="reviews-widget">
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-e42503c8-6c8e-416f-ad69-9ad7d5fdc0b7" data-elfsight-app-lazy></div>
+          </div>
         </div>
-        <a class="button button-light" href="https://www.google.com/maps/search/?api=1&query=Psic%C3%B3loga%20Let%C3%ADcia%20Delcol%20Jales" target="_blank" rel="noopener">
-          Avaliar no Google
-        </a>
       </div>
     </section>
 
